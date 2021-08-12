@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
       description:"Acer Swift 3 SF313-52 13.5-inch (34.29 cms) Laptop (10th Gen Intel Core i5-1035G4 processor/8GB/512GB SSD/Window 10 Home 64Bit/Integrated Graphics), Silver"
       ,image:"https://images-na.ssl-images-amazon.com/images/I/81X6Nf5rAhL._SL1500_.jpg"
   }]
-  res.render('index', {products });
+  res.render('index', {products ,admin:false});
 });
 
 module.exports = router;
