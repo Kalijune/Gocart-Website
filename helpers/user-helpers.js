@@ -47,7 +47,7 @@ module.exports={
                 let proExist=userCart.products.findIndex(product=>product.item==proId)
                 console.log(proExist);
                 if(proExist!=-1){
-                    db.get().collection(collection.CART_COLLECTION).updateOne({'products.item':ObjectId(proId)},
+                    db.get().collection(collection.CART_COLLECTION).updateOne({user:ObjectId(userId),'products.item':ObjectId(proId)},
                     {
                         $inc:{'products.$.quantity':1}
                     }
